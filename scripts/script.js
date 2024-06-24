@@ -1,6 +1,9 @@
-const firstNum = parseInt(prompt("What is the first number?"));
-const operator = prompt("What is operator (+, -, *, /)?");
-const secondNum = parseInt(prompt("What is the second number?"));
+const display = document.querySelector(".display");
+const clearButton = document.querySelector(".clear");
+const numberButtons = document.querySelectorAll(".number");
+const operatorButtons = document.querySelectorAll(".operator");
+
+let numArray = [];
 
 function add (a, b) {
   return a + b;
@@ -34,3 +37,15 @@ function operate (num1, operator, num2) {
       break;
   }
 }
+
+for (let i = 0; i < numberButtons.length; i++) {
+  numberButtons[i].addEventListener("click", () => {
+    numArray.push(numberButtons[i].textContent);
+    display.textContent = numArray.join('');
+  });
+}
+
+clearButton.addEventListener("click", () => {
+  numArray = [];
+  display.textContent = 0;
+});
