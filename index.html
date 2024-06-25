@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <title>Calculator</title>
 </head>
 <body>
@@ -10,8 +13,8 @@
     <div class="display">0</div>
     <div class="row1">
       <button class="clear" id="clear">C</button>
-      <button class="operator" id="inverse"><sup>1</sup>&frasl;<sub>X</sub></button>
-      <button class="operator" id="squared">X<sup>2</sup></button>
+      <button class="squared" id="squared">X<sup>2</sup></button>
+      <button class="inverse" id="inverse"><sup>1</sup>&frasl;<sub>X</sub></button>
       <button class="operator" id="divide">/</button>
     </div>
     <div class="row2">
@@ -33,9 +36,8 @@
       <button class="operator" id="add">+</button>
     </div>
     <div class="row5">
-      <button class="operator" id="plus-minus">+/-</button>
+      <button class="plus-minus" id="plus-minus">+/-</button>
       <button class="number" id="zero">0</button>
-      <button class="decimal" id="decimal">.</button>
       <button class="equals" id="equals">=</button>
     </div>
   </div>
